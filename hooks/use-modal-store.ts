@@ -5,6 +5,9 @@ export enum ModalType {
   INVITE = "INVITE",
   EDIT_SERVER = "EDIT_SERVER",
   MEMBERS = "MEMBERS",
+  CREATE_CHANNEL = "CREATE_CHANNEL",
+  LEAVE_SERVER = "LEAVE_SERVER",
+  DELETE_SERVER = "DELETE_SERVER",
 }
 
 interface ModalData {

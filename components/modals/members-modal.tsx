@@ -13,6 +13,8 @@ import {
   ShieldCheck,
   ShieldQuestion,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { MemberRole } from "@prisma/client";
 
 import {
   Dialog,
@@ -21,16 +23,11 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
 
-import { useOrigin } from "@/hooks/use-origin";
-import { ModalType, useModal } from "@/hooks/use-modal-store";
-import { ServerWithMembersWithProfiles } from "@/types";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import UserAvatar from "@/components/user-avatar";
-import { MemberRole } from "@prisma/client";
+import { ModalType, useModal } from "@/hooks/use-modal-store";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -41,8 +38,9 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import { useRouter } from "next/navigation";
+} from "@/components/ui/dropdown-menu";
+
+import { ServerWithMembersWithProfiles } from "@/types";
 
 const MembersModal = () => {
   const router = useRouter();
